@@ -36,8 +36,11 @@ export default {
 @use '../scss/partials/variabeles.scss' as *;
 
 header {
+  width: 100%;
   background-color: $back-ground-header;
   height: 100px;
+  position: fixed;
+  z-index: 2;
   .container {
     display: flex;
     justify-content: space-between;
