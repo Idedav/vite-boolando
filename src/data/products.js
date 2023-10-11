@@ -1,5 +1,6 @@
 export default [
     {
+        id:598752,
         primaryImage: '1.webp',
         secondaryImage: '1b.webp',
         discount: '-50%',
@@ -10,6 +11,7 @@ export default [
         lastPrice: 14.99
       },
       {
+        id:598762,
         primaryImage: '2.webp',
         secondaryImage: '2b.webp',
         discount: '-30%',
@@ -20,6 +22,7 @@ export default [
         lastPrice: 20.99
       },
       {
+        id:538762,
         primaryImage: '3.webp',
         secondaryImage: '3b.webp',
         discount: '-30%',
@@ -30,6 +33,7 @@ export default [
         lastPrice: 129.99
       },
       {
+        id:5984362,
         primaryImage: '4.webp',
         secondaryImage: '4b.webp',
         discount: '-50%',
@@ -40,20 +44,22 @@ export default [
         lastPrice: 29.99
       },
       {
+        id:59834662,
         primaryImage: '5.webp',
         secondaryImage: '5b.webp',
-        discount: '-50%',
-        sostenibilita: true,
+        discount: null,
+        sostenibilita: null,
         marca: "Maya Deluxe",
         modello: 'STRIPE BODICE',
         fullPrice: null,
         lastPrice: 99.99
       },
       {
+        id:598762,
         primaryImage: '6.webp',
         secondaryImage: '6b.webp',
         discount: null,
-        sostenibilita: false,
+        sostenibilita: true,
         marca: "Esprit",
         modello: 'MAGLIONE - BLACK',
         fullPrice: null,

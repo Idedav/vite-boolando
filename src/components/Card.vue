@@ -1,6 +1,9 @@
 <script>
 export default {
-    name:'Card'
+    name:'Card',
+    props:{
+      productObj: Object
+    }
 }
 </script>
 
@@ -9,21 +12,24 @@ export default {
 
     <div class="product">
         <div class="img-product">
-          <img src="/public/1.webp" alt="" class="imgdefault">
-          <img src="/public/1b.webp" alt="" class="imghover">
+          <img :src="`/public/${productObj.primaryImage}`" alt="" class="imgdefault">
+          <img :src="`/public/${productObj.secondaryImage}`" alt="" class="imghover">
           <span class="heart">&hearts;</span>
           <div class="target">
-            <span class="discount">-50%</span>
-            <span class="sustain">Sostenibilità</span>
+            <span v-if="productObj.discount != null"
+            class="discount">{{ productObj.discount }}</span>
+            <span v-if="productObj.sostenibilita === true"
+            class="sustain">Sostenibilità</span>
           </div>
         </div>
         <div class="description">
-          <span>Levi's</span>
-          <h3><strong>RELAXED FIT TEE UNISEX</strong></h3>
+          <span>{{ productObj.marca }}</span>
+          <h3><strong>{{ productObj.modello }}</strong></h3>
         </div>
         <div class="price">
-          <span class="discounted">14,99 &euro;</span>
-          <span class="original">29,99 &euro;</span>
+          <span class="discounted">{{ productObj.lastPrice }} &euro;</span>
+          <span v-if="productObj.fullPrice != null"
+          class="original">{{ productObj.fullPrice }} &euro;</span>
         </div>
     </div>
 
